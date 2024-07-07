@@ -15,7 +15,7 @@
 		"email": "rasmuslp@gmail.com"
 	},
 	"scripts": {
-		"dev:agent": "node -r ts-node/register src/agent/index.ts",
+		"dev:device": "node -r ts-node/register src/device/index.ts",
 		"dev:server": "node -r ts-node/register src/server/index.ts",
 		"format": "npm run prettier:write",
 		"lint": "eslint --ext .js,.ts,.tsx src",
@@ -36,7 +36,9 @@
 	},
 	"dependencies": {
 		"express": "4.19.2",
-		"express-async-errors": "3.1.1"
+		"express-async-errors": "3.1.1",
+		"socket.io": "4.7.5",
+		"socket.io-client": "4.7.5"
 	},
 	"engines": {
 		"node": ">=20.9.0"
