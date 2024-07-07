@@ -1,0 +1,34 @@
+{
+	"name": "lego-iiot-interview",
+	"version": "0.1.0",
+	"description": "",
+	"homepage": "https://github.com/rasmuslp/lego-iiot-interview",
+	"bugs": {
+		"url": "https://github.com/rasmuslp/lego-iiot-interview/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rasmuslp/lego-iiot-interview.git"
+	},
+	"author": {
+		"name": "Rasmus Ljungmann Pedersen",
+		"email": "rasmuslp@gmail.com"
+	},
+	"scripts": {
+		"dev:agent": "node -r ts-node/register src/agent/index.ts",
+		"dev:server": "node -r ts-node/register src/server/index.ts",
+		"format": "npm run prettier:write",
+		"lint": "eslint --ext .js,.ts,.tsx src",
+		"prettier:check": "prettier . --check",
+		"prettier:write": "prettier . --write",
+		"type-check": "tsc --noEmit",
+		"full-suite": "npm run prettier:write && npm run lint && npm run type-check"
+	},
+	"devDependencies": {
+		"@rasmuslp/eslint-config": "7.2.2",
+		"eslint-config-prettier": "9.1.0",
+		"prettier": "3.3.2",
+		"ts-node": "10.9.2",
+		"typescript": "5.5.3"
+	}
+}
